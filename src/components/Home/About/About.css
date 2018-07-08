@@ -1,4 +1,4 @@
-.about {
+#about {
   height: 100%;
   padding: 10px 20px;
   background-color: rgba(38, 166, 154, 0.8);
@@ -16,16 +16,42 @@
   margin: 0 auto 30px auto;
 }
 
+.row {
+  padding: 2rem;
+}
+
+.circle-icon {
+  color: rgb(245, 245, 245);
+  font-size: 60px;
+  text-align: center;
+}
+
 .number {
   color: rgb(245, 245, 245);
   font-size: 60px;
   margin: 0.5rem;
 }
 
+.about-content {
+  padding: 1rem;
+}
+
+.about-content-left {
+  border-right: 3px dashed HSLA(205, 85%, 92%, 1);
+}
+
+.about-content-right {
+  border-left: 3px dashed HSLA(205, 85%, 92%, 1);
+  padding-left: 6rem;
+}
+
+.responsive-img {
+  padding: 4rem 0 0 1rem;
+}
+
 .about-description {
   color: rgb(245, 245, 245);
   margin-left: 4rem;
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Indie Flower', cursive;
-
 }

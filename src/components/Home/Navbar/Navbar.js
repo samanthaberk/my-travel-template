@@ -15,7 +15,7 @@ const navbar = (props) =>
         <div className="logo">My Travel Template</div>
           <div className="navbar-space" />
           <ul className="navbar-items">
-            <li><a href="">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="">Features</a></li>
             <li><a href="">Sign-in</a></li>
           </ul>

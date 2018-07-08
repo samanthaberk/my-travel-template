@@ -8,7 +8,7 @@ const jumbotron= (props) => (
     <button className="btn waves-effect waves-light" type="submit" name="action">START
       <i className="material-icons right"></i>
     </button>
-      <p>or scroll down to <span>learn more</span><div className="arrow-btn"><i className="medium material-icons">arrow_downward</i></div></p>
+      <p>or scroll down to <span>learn more</span><span className="arrow-btn"><i className="medium material-icons">arrow_downward</i></span></p>
 
   </section>
 );
