@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Navbar from './Navbar/Navbar';
 import SideBar from './SideBar/SideBar';
 import Backdrop from './Backdrop/Backdrop';
+import Jumbotron from './Jumbotron/Jumbotron';
 
 class Home extends Component {
   state = {
@@ -30,8 +31,8 @@ class Home extends Component {
         <Navbar sidebarClickHandler={this.sidebarToggleClickHandler} />
         <SideBar show={this.state.sidebarOpen} />
         { backdrop }
-        <main style={{marginTop: '100px'}}>
-          <p>Page Content Goes Here</p>
+        <main>
+          <Jumbotron />
         </main>
       </div>
     );

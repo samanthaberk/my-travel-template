@@ -1,5 +1,6 @@
 .sidebar {
   height: 100%;
+  background-color: rgb(38, 166, 154);
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -27,11 +28,6 @@
 
 .sidebar a {
   font-size: 1.2rem;
-}
-
-.sidebar a:hover,
-.sidebar a:active {
-  color: orange;
 }
 
 @media (min-width: 769px) {
