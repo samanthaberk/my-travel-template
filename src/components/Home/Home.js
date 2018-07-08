@@ -6,6 +6,7 @@ import Backdrop from './Backdrop/Backdrop';
 import Jumbotron from './Jumbotron/Jumbotron';
 import About from './About/About';
 import Features from './Features/Features';
+import Footer from './Footer/Footer';
 
 class Home extends Component {
   state = {
@@ -37,6 +38,7 @@ class Home extends Component {
           <Jumbotron />
           <About />
           <Features />
+          <Footer />
         </main>
       </div>
     );

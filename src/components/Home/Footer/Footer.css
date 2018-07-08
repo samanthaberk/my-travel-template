@@ -1,0 +1,16 @@
+.page-footer {
+  background-color: rgb(47,79,79);
+}
+
+.footer-text {
+  line-height: 1.5rem;
+}
+
+a {
+  color: rgb(38, 166, 154);
+}
+
+li a {
+  color: rgb(38, 166, 154);
+  line-height: 2rem;
+}
