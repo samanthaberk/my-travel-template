@@ -1,0 +1,31 @@
+.about {
+  height: 100%;
+  padding: 10px 20px;
+  background-color: rgba(38, 166, 154, 0.8);
+}
+
+.about-title {
+  color: rgb(245, 245, 245);
+  font-weight: bold;
+}
+
+.content-title-underline {
+  width: 50px;
+  height: 3px;
+  background-color: rgb(245, 245, 245);
+  margin: 0 auto 30px auto;
+}
+
+.number {
+  color: rgb(245, 245, 245);
+  font-size: 60px;
+  margin: 0.5rem;
+}
+
+.about-description {
+  color: rgb(245, 245, 245);
+  margin-left: 4rem;
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+
+}
