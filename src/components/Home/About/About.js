@@ -4,7 +4,7 @@ import './About.css'
 const about= (props) => (
   <section id="about">
     <div className="about-title center-align"><h3>How it Works</h3></div>
-    <div className="content-title-underline"></div>
+    <div className="about-content-title-underline"></div>
     <div className="row">
       <div className="about-content-left col l6 valign-wrapper">
         <div className="about-container">

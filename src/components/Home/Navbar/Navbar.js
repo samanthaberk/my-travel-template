@@ -16,7 +16,7 @@ const navbar = (props) =>
           <div className="navbar-space" />
           <ul className="navbar-items">
             <li><a href="#about">About</a></li>
-            <li><a href="">Features</a></li>
+            <li><a href="#features">Features</a></li>
             <li><a href="">Sign-in</a></li>
           </ul>
       </nav>
