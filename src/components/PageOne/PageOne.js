@@ -20,7 +20,7 @@ class PageOne extends Component {
 
         <QuestionSideBar question={this.state.questionNum} text={this.state.questionText}/>
 
-          <div className="col s8 quiz-page-content">
+          <div className="col s8 quiz-one-content-bg">
 
             <div className="row">
               <Checkbox text={this.state.answer1}/>
@@ -34,7 +34,7 @@ class PageOne extends Component {
 
           </div>
       </section>
-    )
+    );
   }
 }
 
