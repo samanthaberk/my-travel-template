@@ -6,7 +6,7 @@ import PageOne from '../components/PageOne/PageOne';
 
 class App extends Component {
     state = {
-      display: "pageOne"
+      display: "home"
     }
   render() {
     let current_output = "";

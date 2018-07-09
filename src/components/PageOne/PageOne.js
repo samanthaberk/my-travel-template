@@ -1,17 +1,19 @@
 import React, { Component } from "react";
+import QuestionSideBar from '../QuizComponents/QuestionSideBar';
 
 import './PageOne.css'
 
 class PageOne extends Component {
+  state = {
+    questionNum: "1",
+    questionText: "HOW LONG IS YOUR TRIP?"
+  }
+
   render() {
     return (
       <section className="page-one row">
-          <div className="col s4 quiz-side-panel">
-            <div className="questions-container">
-              <h3>Question 1/10</h3>
-              <h5>HOW LONG IS YOUR TRIP?</h5>
-            </div>
-          </div>
+        
+        <QuestionSideBar question={this.state.questionNum} text={this.state.questionText}/>
 
           <div className="col s8 quiz-page-content">
 
