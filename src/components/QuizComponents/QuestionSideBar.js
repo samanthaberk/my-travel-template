@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const questionSideBar = (props) => (
   <div className="col s4 quiz-side-panel">

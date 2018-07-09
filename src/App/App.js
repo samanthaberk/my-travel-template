@@ -1,26 +1,35 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 import Home from '../components/Home/Home';
 import PageOne from '../components/PageOne/PageOne';
+import PageTwo from '../components/PageTwo/PageTwo';
 
+import './App.css';
 
 class App extends Component {
     state = {
-      display: "home"
+      display: "questionOne"
     }
   render() {
     let current_output = "";
     if(this.state.display === "home") {
-      current_output = < Home />
+      current_output = <Route path="/" exact render={() => <Home />} />
     }
-    if (this.state.display === "pageOne") {
-      current_output = < PageOne />
+    if (this.state.display === "questionOne") {
+      current_output = <Route path="/question1" exact render={() => <PageOne />} />
+    }
+    if (this.state.display === "questionTwo") {
+      current_output = <Route path="/question2" exact render={() => <PageTwo />} />
     }
 
     return (
-      <div className="App">
-        { current_output }
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          { current_output }
+        </div>
+      </BrowserRouter>
     );
   }
 }
