@@ -1,5 +1,7 @@
 import React from "react";
 
+import './QuizStyling.css';
+
 const checkbox = (props) => (
 
   <div>

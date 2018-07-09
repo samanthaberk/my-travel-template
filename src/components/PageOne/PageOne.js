@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Route, Link } from 'react-router-dom';
+
 import QuestionSideBar from '../QuizComponents/QuestionSideBar';
 import Checkbox from '../QuizComponents/Checkbox';
 
@@ -31,8 +33,14 @@ class PageOne extends Component {
               <Checkbox text={this.state.answer3}/>
               <Checkbox text={this.state.answer4}/>
             </div>
+            <Link to={{pathname: '/question2'}}>
+              <a class="btn-floating">
+                <i className="material-icons">play_arrow</i>
+              </a>
+          </Link>
 
           </div>
+
       </section>
     );
   }

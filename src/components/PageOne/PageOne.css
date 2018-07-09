@@ -1,29 +1,7 @@
-section {
-  margin: 0;
-  padding: 0;
-}
 .page-one {
   margin: 0;
   padding: 0;
   height: 100%;
-}
-
-.quiz-side-panel {
-  height: 650px;
-  width: 600px;
-  background-color: rgb(38, 166, 154);
-  border-right: 8px solid rgb(245, 245, 245);
-}
-
-.questions-container {
-  margin-top: 200px;
-  color: rgb(245, 245, 245);
-  text-align: center;
-  padding: 4rem;
-}
-
-.questions-container h3, h5 {
-  font-weight: bold;
 }
 
 .quiz-one-content-bg {
@@ -36,20 +14,4 @@ section {
 
 .pg1-questions {
   padding: 4rem;
-}
-
-[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
-  border: 2px solid rgb(245, 245, 245);
-  width: 20px;
-  height: 20px;
-}
-
-[type="checkbox"]+span:not(.lever) {
-  color: rgb(245, 245, 245);
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-span {
-  width: 800px;
 }
