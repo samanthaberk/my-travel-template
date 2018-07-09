@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from '../components/Home/Home';
-import PageOne from '../components/PageOne';
+import PageOne from '../components/PageOne/PageOne';
 
 
 class App extends Component {
     state = {
-      display: "home"
+      display: "pageOne"
     }
   render() {
     let current_output = "";
