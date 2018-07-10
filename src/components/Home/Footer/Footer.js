@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Footer.css';
 
@@ -13,7 +14,9 @@ const footer = (props) => (
         <div className="col l4 offset-l2 s12">
           <h5 className="white-text">Menu</h5>
           <ul>
+            <Link to={{pathname: '/quiz'}}>
             <li><a href="#!">Create a Travel Template</a></li>
+            </Link>
             <li><a href="#about">About</a></li>
             <li><a href="#features">Features</a></li>
           </ul>

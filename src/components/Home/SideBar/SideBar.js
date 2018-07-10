@@ -10,9 +10,9 @@ const sideBar = props => {
   return (
     <nav className={sidebarClasses}>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="">Sign-in</a></li>
+        <li onClick={props.click}><a href="#about">About</a></li>
+        <li onClick={props.click}><a href="#features">Features</a></li>
+        <li onClick={props.click}><a href="">Sign-in</a></li>
       </ul>
     </nav>
   );

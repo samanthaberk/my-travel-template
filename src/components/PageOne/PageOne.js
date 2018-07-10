@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import QuestionSideBar from '../QuizComponents/QuestionSideBar';
 import Checkbox from '../QuizComponents/Checkbox';
@@ -22,7 +22,7 @@ class PageOne extends Component {
 
         <QuestionSideBar question={this.state.questionNum} text={this.state.questionText}/>
 
-          <div className="col s8 quiz-one-content-bg">
+          <form className="col s8 quiz-one-content-bg">
 
             <div className="row">
               <Checkbox text={this.state.answer1}/>
@@ -39,7 +39,7 @@ class PageOne extends Component {
               </a>
           </Link>
 
-          </div>
+        </form>
 
       </section>
     );

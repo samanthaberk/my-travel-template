@@ -21,7 +21,9 @@ class Home extends Component {
 
   backdropClickHandler = () => {
     this.setState({sidebarOpen: false});
+    return{sidebarOpen: !this.state.sidebarOpen};
   };
+
 
   render() {
     let backdrop;
@@ -32,7 +34,7 @@ class Home extends Component {
     return (
       <div>
         <Navbar sidebarClickHandler={this.sidebarToggleClickHandler} />
-        <SideBar show={this.state.sidebarOpen} />
+        <SideBar show={this.state.sidebarOpen} click={this.backdropClickHandler}/>
         { backdrop }
         <main>
           <Jumbotron />
