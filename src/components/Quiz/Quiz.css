@@ -28,3 +28,20 @@
 .questions-container h5 {
   font-size: 2rem;
 }
+
+
+@media (max-width: 700px) {
+  .questions-container h3 {
+    font-size: 2.5rem;
+  }
+
+  .questions-container h5 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 535px) {
+  .row .col.s4 {
+    width: 50%;
+  }
+}
