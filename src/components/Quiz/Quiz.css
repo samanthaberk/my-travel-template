@@ -30,8 +30,10 @@
   font-size: 2rem;
 }
 
-/* Right-side Styles */
-.row .col.s8 {
+/* Right-side Styles & Checkboxes */
+
+.quiz-answer-choices {
+  text-align: center;
   height: 100%;
 }
 
@@ -39,12 +41,14 @@
   border: 2px solid rgb(245, 245, 245);
   width: 20px;
   height: 20px;
+  margin: 5% 0;
 }
 
 [type="checkbox"]+span:not(.lever) {
   color: rgb(245, 245, 245);
   font-size: 2rem;
   font-weight: bold;
+  margin: 25% 0 15% 0;
 }
 
 /* Btn Styling */

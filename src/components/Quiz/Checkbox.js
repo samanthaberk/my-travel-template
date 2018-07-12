@@ -6,8 +6,8 @@ import './Quiz.css';
 const checkbox = (props) => (
 
   <div>
-    <div className="col s12 m6 l6 pg1-questions">
-      <p className="pg1-questions">
+    <div className="col s12 m6 l6">
+      <p>
         <label>
           <input type="checkbox" />
           <span>{props.text}</span>

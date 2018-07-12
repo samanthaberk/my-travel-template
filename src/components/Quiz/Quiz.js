@@ -18,7 +18,7 @@ class Quiz extends Component {
 
   render() {
     return (
-      <section className="row">
+      <section className="row quiz">
         <QuestionSideBar number={this.state.questionNumber} text={this.state.questionText} />
         <AnswerChoices answers= {this.state.answers} picture={this.state.backgroundImage}/>
     </section>
