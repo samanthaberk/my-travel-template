@@ -29,6 +29,11 @@
   font-size: 2rem;
 }
 
+/* Right-side Styles */
+.row .col.s8 {
+  height: 100%;
+}
+
 
 @media (max-width: 700px) {
   .questions-container h3 {

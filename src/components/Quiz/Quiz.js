@@ -11,6 +11,7 @@ class Quiz extends Component {
     questions: 1,
     questionNumber: data.questions[0].number,
     questionText: data.questions[0].question,
+    backgroundImage: data.questions[0].bgImage,
     progress: 0,
     answers: data.questions[0].answerChoices
   };
@@ -19,9 +20,8 @@ class Quiz extends Component {
     return (
       <section className="row">
         <QuestionSideBar number={this.state.questionNumber} text={this.state.questionText} />
-        <AnswerChoices answers= {this.state.answers}/>
-      </section>
-
+        <AnswerChoices answers= {this.state.answers} picture={this.state.backgroundImage}/>
+    </section>
     );
   }
 }
