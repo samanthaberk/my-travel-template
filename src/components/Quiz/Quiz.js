@@ -1,25 +1,29 @@
 import React, { Component } from "react";
 
+import data from './Data';
 import QuestionSideBar from './QuestionSideBar';
-import Checkbox from '../QuizComponents/Checkbox';
+import Checkbox from './Checkbox';
 
-import '../PageOne/PageOne.css'
+import './Quiz.css'
 
 class Quiz extends Component {
   state = {
     questions: 1,
-    questionNumber: 1,
-    questionText: "Question 1",
+    questionNumber: data.questions[0].number,
+    questionText: data.questions[0].question,
     progress: 0,
-    answers: []
+    answers: data.questions[0].answerChoices
   };
 
   render() {
     return (
-      <section>
+      <section className="row">
         <QuestionSideBar number={this.state.questionNumber} text={this.state.questionText} />
-
+          <div class="col s8">
+            <h3> page content  </h3>
+          </div>
       </section>
+
     );
   }
 }

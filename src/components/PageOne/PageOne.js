@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-
+import Checkbox from '../Quiz/Checkbox';
 import QuestionSideBar from '../Quiz/QuestionSideBar';
-
-import Checkbox from '../QuizComponents/Checkbox';
-
-import './PageOne.css'
 
 class PageOne extends Component {
   state = {

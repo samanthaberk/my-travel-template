@@ -1,4 +1,4 @@
-const Quizdata = {
+const data = {
 
     questions: [
       {
@@ -64,4 +64,4 @@ const Quizdata = {
     ]
 };
 
-export default QuizData;
+export default data;
