@@ -8,10 +8,10 @@ import './Quiz.css'
 
 class Quiz extends Component {
   state = {
+    question: data.questions[0].question,
     questionNumber: data.questions[0].number,
-    questionText: data.questions[0].question,
+    questionText: data.questions[0].questionText,
     backgroundImage: data.questions[0].bgImage,
-    progress: 0,
     answers: data.questions[0].answerChoices,
     userAnswers: {
       duration: null,
@@ -21,6 +21,7 @@ class Quiz extends Component {
       internalTravel: null,
       cityTravel: null,
       travelParty: null,
+      budget: null,
       interests: [],
       entertainment: []
     }
@@ -30,7 +31,7 @@ class Quiz extends Component {
     return (
       <section className="row quiz">
         <QuestionSideBar number={this.state.questionNumber} text={this.state.questionText} />
-        <AnswerChoices answers= {this.state.answers} picture={this.state.backgroundImage}/>
+        <AnswerChoices updateCurrentSelection={this.state.userAnswers} answers= {this.state.answers} picture={this.state.backgroundImage} />
     </section>
     );
   }
