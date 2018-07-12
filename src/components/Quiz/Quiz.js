@@ -8,12 +8,22 @@ import './Quiz.css'
 
 class Quiz extends Component {
   state = {
-    questions: 1,
     questionNumber: data.questions[0].number,
     questionText: data.questions[0].question,
     backgroundImage: data.questions[0].bgImage,
     progress: 0,
-    answers: data.questions[0].answerChoices
+    answers: data.questions[0].answerChoices,
+    userAnswers: {
+      duration: null,
+      travelertype: null,
+      pace: null,
+      sites: null,
+      internalTravel: null,
+      cityTravel: null,
+      travelParty: null,
+      interests: [],
+      entertainment: []
+    }
   };
 
   render() {
