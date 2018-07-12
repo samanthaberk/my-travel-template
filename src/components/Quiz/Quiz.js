@@ -19,7 +19,7 @@ class Quiz extends Component {
     return (
       <section className="row">
         <QuestionSideBar number={this.state.questionNumber} text={this.state.questionText} />
-        <AnswerChoices />
+        <AnswerChoices answers= {this.state.answers}/>
       </section>
 
     );
