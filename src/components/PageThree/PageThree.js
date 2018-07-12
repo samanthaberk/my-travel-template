@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import QuestionSideBar from '../QuizComponents/QuestionSideBar';
+import QuestionSideBar from '../Quiz/QuestionSideBar';
 import Checkbox from '../QuizComponents/Checkbox';
 
 import './PageThree.css'

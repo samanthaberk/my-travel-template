@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import QuestionSideBar from '../QuizComponents/QuestionSideBar';
+import QuestionSideBar from '../Quiz/QuestionSideBar';
 import Checkbox from '../QuizComponents/Checkbox';
 
 import './PageTwo.css'

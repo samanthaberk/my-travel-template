@@ -10,7 +10,8 @@ import Footer from './Footer/Footer';
 
 class Home extends Component {
   state = {
-    sidebarOpen: false
+    sidebarOpen: false,
+    isTop: true
   };
 
   sidebarToggleClickHandler = () => {
