@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-right: 8px solid rgb(245, 245, 245);
 }
 
 .questions-container h3, h5{
@@ -32,6 +33,32 @@
 /* Right-side Styles */
 .row .col.s8 {
   height: 100%;
+}
+
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+  border: 2px solid rgb(245, 245, 245);
+  width: 20px;
+  height: 20px;
+}
+
+[type="checkbox"]+span:not(.lever) {
+  color: rgb(245, 245, 245);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Btn Styling */
+.btn-floating {
+  width: 75px;
+  height: 75px;
+  float: right;
+  margin-top: 50%;
+}
+
+.btn-floating i {
+  line-height: 75px;
+  font-size: 4rem;
+  float: right;
 }
 
 

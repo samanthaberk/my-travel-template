@@ -11,9 +11,11 @@ const answerChoices = (props) => {
     )
   });
   return (
-    <div style={{backgroundImage: 'url(' + require(`${image}`) +')', height: "100%", backgroundSize: 'cover'}} className ="col s8 quiz-answer-choices">
+    <div style={{background: 'linear-gradient( rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)),url(' + require(`${image}`) +')', height: "100%", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}} className ="col s8 quiz-answer-choices">
       {answers}
-      <h1>{props.picture}</h1>
+      <a class="btn-floating">
+        <i className="material-icons">play_arrow</i>
+      </a>
     </div>
   );
 }
