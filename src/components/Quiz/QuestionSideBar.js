@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const questionSideBar = (props) => (
   <div className="col s4 quiz-side-panel">
@@ -8,5 +9,10 @@ const questionSideBar = (props) => (
     </div>
   </div>
 );
+
+questionSideBar.propTypes = {
+  number: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired
+};
 
 export default questionSideBar;
