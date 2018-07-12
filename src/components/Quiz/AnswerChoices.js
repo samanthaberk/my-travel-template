@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
+import Checkbox from './Checkbox';
+
 const answerChoices = (props) => {
   const answers = props.answers.map((choice) => {
     return (
-      <p>{choice}</p>
+      <Checkbox text={choice} />
     )
   });
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import './Quiz.css';
 
@@ -16,5 +17,9 @@ const checkbox = (props) => (
   </div>
 
 );
+
+checkbox.propTypes = {
+  text: PropTypes.string.isRequired
+};
 
 export default checkbox;
