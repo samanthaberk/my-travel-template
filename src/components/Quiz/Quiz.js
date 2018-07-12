@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import data from './Data';
 import QuestionSideBar from './QuestionSideBar';
-import Checkbox from './Checkbox';
+import AnswerChoices from './AnswerChoices';
 
 import './Quiz.css'
 
@@ -19,9 +19,7 @@ class Quiz extends Component {
     return (
       <section className="row">
         <QuestionSideBar number={this.state.questionNumber} text={this.state.questionText} />
-          <div class="col s8">
-            <h3> page content  </h3>
-          </div>
+        <AnswerChoices />
       </section>
 
     );
