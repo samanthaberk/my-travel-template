@@ -15,7 +15,7 @@ class Quiz extends Component {
     answers: data.questions[0].answerChoices,
     userAnswers: {
       duration: null,
-      travelertype: null,
+      travelerType: null,
       pace: null,
       sites: null,
       internalTravel: null,
@@ -27,11 +27,18 @@ class Quiz extends Component {
     }
   };
 
+  // const updateCurrentAnswer = (answer) => {
+  //   const answers = [...this.state.userAnswers];
+  //   const question = answers[this.state.question];
+  //   this.setState( { question: answer});
+  //   console.log(this.state);
+  // }
+
   render() {
     return (
       <section className="row quiz">
         <QuestionSideBar number={this.state.questionNumber} text={this.state.questionText} />
-        <AnswerChoices updateCurrentSelection={this.state.userAnswers} answers= {this.state.answers} picture={this.state.backgroundImage} />
+        <AnswerChoices updateCurrentAnswerCallback={this.updateCurrentAnswer} answers= {this.state.answers} picture={this.state.backgroundImage} />
     </section>
     );
   }

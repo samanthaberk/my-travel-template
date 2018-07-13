@@ -10,7 +10,7 @@ const data = {
       },
       {
         number: 2,
-        question: "travelertype",
+        question: "travelerType",
         questionText: "HAVE YOU TRAVELED HERE BEFORE?",
         answerChoices: ["First-Timer", "Return Traveler"],
         bgImage: "./Images/pagodas.JPG"
