@@ -6,11 +6,6 @@ import Radio from './Radio';
 
 const answerChoices = (props) => {
 
-  const onAnswerSelect = () => {
-    console.log(event.target.value);
-    // this.props.updateCurrentAnswerCallback(event.target.value);
-  };
-
   const image = props.image;
   let answers = null;
   if (props.format === 'checkbox') {
@@ -29,7 +24,7 @@ const answerChoices = (props) => {
           text={choice}
           key={choice}
           value={choice}
-          CurrentAnswerCallback={this.onAnswerSelect}
+          CurrentAnswerCallback={props.onAnswerSelect}
         />
       )
     });
@@ -40,7 +35,7 @@ const answerChoices = (props) => {
       <form>
       {answers}
       </form>
-      <a className="btn-floating">
+      <a className="btn-floating" onClick={props.nextPageCallback}>
         <i className="material-icons">play_arrow</i>
       </a>
     </div>
@@ -49,6 +44,8 @@ const answerChoices = (props) => {
 
 
 answerChoices.propTypes = {
+  nextPageCallback: PropTypes.func.isRequired,
+  onAnswerSelect: PropTypes.func.isRequired,
   format: PropTypes.string.isRequired,
   answers: PropTypes.array.isRequired,
   image: PropTypes.string.isRequired
