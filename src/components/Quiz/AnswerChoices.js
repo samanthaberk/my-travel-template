@@ -5,9 +5,7 @@ import Checkbox from './Checkbox';
 import Radio from './Radio';
 
 const answerChoices = (props) => {
-
-  const image = props.image;
-  let answers = null;
+    let answers = null;
   if (props.format === 'checkbox') {
     answers = props.answers.map((choice) => {
       return (
@@ -31,7 +29,7 @@ const answerChoices = (props) => {
   }
 
   return (
-    <div style={{background: 'linear-gradient( rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)),url(' + require(`${image}`) +')', height: "100%", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}} className ="col s8 quiz-answer-choices">
+    <div className={`col s8 pg-${props.image}`}>
       <form>
       {answers}
       </form>

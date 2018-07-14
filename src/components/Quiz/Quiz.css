@@ -30,12 +30,89 @@
   font-size: 2rem;
 }
 
-/* Right-side Styles & Checkboxes */
+/* Images */
 
-.quiz-answer-choices {
-  text-align: center;
+.pg-1 {
   height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/lanterns.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
 }
+
+.pg-2 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/pagodas.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-3 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/bridge.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-4 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/mountainTemple.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-5 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/trainStation.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-6 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/shanghai.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-7 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/riceTerrace.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-8 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/terraCotta.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-9 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/bamboo.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.pg-10 {
+  height: 100%;
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/pagoda.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* Right-side Styles & Checkboxes */
 
 [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
   border: 2px solid rgb(245, 245, 245);

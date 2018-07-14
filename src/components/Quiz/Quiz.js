@@ -13,7 +13,7 @@ class Quiz extends Component {
       question: data.questions[0].text,
       answerFormat: data.questions[0].answerFormat,
       answerChoices: data.questions[0].answerChoices,
-      image: data.questions[0].image,
+      image: 1,
       duration: null,
       travelerType: null,
       pace: null,
@@ -29,27 +29,28 @@ class Quiz extends Component {
   updateCurrentPage = () => {
     if (this.state.number <= 10) {
       const number = this.state.number + 1;
+      const image = this.state.image + 1;
       const tag = data.questions[number-1].tag;
       const question = data.questions[number-1].text;
       const answerFormat = data.questions[number-1].answerFormat;
       const answerChoices = data.questions[number-1].answerChoices;
-      const image = data.questions[number-1].image;
 
       this.setState({
         number: number,
+        image: image,
         tag: tag,
         question: question,
         answerFormat: answerFormat,
         answerChoices: answerChoices,
-        image: image
       });
-    } 
+    }
 
   }
 
   updateCurrentAnswer = (answer) => {
     const tag = this.state.tag;
-    alert(tag);
+    console.log(tag);
+    console.log(answer);
     this.setState({tag: answer});
   }
 
