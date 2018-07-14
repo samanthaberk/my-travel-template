@@ -6,10 +6,11 @@ import Radio from './Radio';
 
 const answerChoices = (props) => {
 
-  // const onCheckboxSelect = () => {
-  //   console.log("event");
-  //   // this.props.updateCurrentAnswerCallback(event.target.value);
-  // };
+  const onAnswerSelect = () => {
+    console.log(event.target.value);
+    // this.props.updateCurrentAnswerCallback(event.target.value);
+  };
+
   const image = props.image;
   let answers = null;
   if (props.format === 'checkbox') {
@@ -27,7 +28,9 @@ const answerChoices = (props) => {
         <Radio
           text={choice}
           key={choice}
-          value={choice}/>
+          value={choice}
+          CurrentAnswerCallback={this.onAnswerSelect}
+        />
       )
     });
   }
