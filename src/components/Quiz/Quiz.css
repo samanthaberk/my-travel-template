@@ -51,6 +51,20 @@
   margin: 25% 0 15% 0;
 }
 
+[type="radio"]+span:not(.lever):before, [type="radio"]:not(.filled-in)+span:not(.lever):after {
+  border: 2px solid rgb(245, 245, 245);
+  width: 20px;
+  height: 20px;
+  margin: 5% 0;
+}
+
+[type="radio"]+span:not(.lever) {
+  color: rgb(245, 245, 245);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 25% 0 15% 0;
+}
+
 /* Btn Styling */
 .btn-floating {
   width: 75px;
