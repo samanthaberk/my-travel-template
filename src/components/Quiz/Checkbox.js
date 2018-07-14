@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import './Quiz.css';
 
-class checkbox extends Component {
+class Checkbox extends Component {
 
-  checkboxClicked = (props) => {
-      alert(this.props.text);
+  onCheckboxClick = (props) => {
+      this.props.CurrentAnswerCallback(this.props.text);
   }
   render() {
   return(
@@ -15,7 +15,7 @@ class checkbox extends Component {
       <div className="col s12 m6 l6">
         <p>
           <label>
-            <input type="checkbox" onClick={this.checkboxClicked}/>
+            <input type="checkbox" onClick={this.onCheckboxClick}/>
             <span>{this.props.text}</span>
           </label>
         </p>
@@ -26,8 +26,8 @@ class checkbox extends Component {
   }
 }
 
-checkbox.propTypes = {
+Checkbox.propTypes = {
   text: PropTypes.string.isRequired
 };
 
-export default checkbox;
+export default Checkbox;

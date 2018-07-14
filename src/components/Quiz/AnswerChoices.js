@@ -14,6 +14,7 @@ const answerChoices = (props) => {
   const answers = props.answers.map((choice) => {
     return (
       <Checkbox
+        CurrentAnswerCallback={props.updateCurrentAnswerCallback}
         text={choice}
         key={choice}
         value={choice}/>
