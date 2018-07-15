@@ -42,11 +42,19 @@
 
 .about-content-right {
   border-left: 3px dashed HSLA(205, 85%, 92%, 1);
-  padding-left: 6rem;
+  padding-left: 4rem;
+  margin-left: 1.75rem;
+}
+
+.valign .responsive-img {
+  margin-left: 1rem;
 }
 
 .responsive-img {
-  padding: 4rem 0 0 1rem;
+  width: 450px;
+  height: 250px;
+  border: 4px solid rgb(245, 245, 245);
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
 }
 
 .about-description {

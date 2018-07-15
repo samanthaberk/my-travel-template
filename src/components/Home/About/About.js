@@ -20,7 +20,7 @@ const about= (props) => (
         </div>
       </div>
       <div className="col offset-l1 15 no-right-padding valign">
-        <img src="http://via.placeholder.com/350x150" alt="Tell us About Yourself" className="responsive-img" />
+        <img src={require("./quizScreenshot.png")} alt="Tell us About Yourself" className="responsive-img" />
       </div>
     </div>
 
@@ -32,7 +32,7 @@ const about= (props) => (
       <div className="about-content col 15 valign">
         <img src="http://via.placeholder.com/350x150" alt="Get your personalized travel template" className="responsive-img" />
       </div>
-      <div className="col l6 offset-l2 valign-wrapper">
+      <div className="col l6 offset-l1 valign-wrapper">
         <div className="about-container">
           <div className="about-content-right">
             <h4 className="about-title">
@@ -78,7 +78,7 @@ const about= (props) => (
       <div className="col 15 valign">
         <img src="http://via.placeholder.com/350x150" alt="Get your personalized travel template" className="responsive-img" />
       </div>
-      <div className="col l6 offset-l2 valign-wrapper">
+      <div className="col l6 offset-l1 valign-wrapper">
         <div className="about-container">
           <div className="about-content-right">
             <h4 className="about-title">
