@@ -51,7 +51,9 @@ class Quiz extends Component {
     const tag = this.state.tag;
     console.log(tag);
     console.log(answer);
-    this.setState({tag: answer});
+    this.setState({
+      tag: answer
+    });
   }
 
   render() {

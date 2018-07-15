@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 
 import Checkbox from './Checkbox';
@@ -15,7 +15,7 @@ const answerChoices = (props) => {
           value={choice}/>
       )
     });
-  } else if (props.format == 'radio') {
+  } else if (props.format === 'radio') {
      answers = props.answers.map((choice) => {
       return (
         <Radio

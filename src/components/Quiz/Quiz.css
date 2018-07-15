@@ -146,8 +146,11 @@
 .btn-floating {
   width: 75px;
   height: 75px;
-  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   margin-top: 10%;
+  margin: 2rem;
 }
 
 .btn-floating i {
