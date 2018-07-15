@@ -14,6 +14,15 @@ class Home extends Component {
     isTop: true
   };
 
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 100;
+      if (isTop !== this.state.isTop) {
+          this.setState({ isTop })
+      }
+    });
+  }
+
   sidebarToggleClickHandler = () => {
     this.setState((prevState)=>{
       return{sidebarOpen: !prevState.sidebarOpen};
@@ -34,7 +43,7 @@ class Home extends Component {
     }
     return (
       <div>
-        <Navbar sidebarClickHandler={this.sidebarToggleClickHandler} />
+        <Navbar background={this.state.isTop} sidebarClickHandler={this.sidebarToggleClickHandler} />
         <SideBar show={this.state.sidebarOpen} click={this.backdropClickHandler}/>
         { backdrop }
         <main>

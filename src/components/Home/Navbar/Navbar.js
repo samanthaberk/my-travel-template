@@ -7,7 +7,7 @@ import './Navbar.css';
 const navbar = (props) =>
   (
     <header className="header">
-      <nav className="navbar">
+      <nav className={`navbar ${props.background}`}>
         <div className="toggle-navbar-btn">
           <SideBarButton click={ props.sidebarClickHandler }/>
         </div>

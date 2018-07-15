@@ -17,11 +17,16 @@
   letter-spacing: 0.15rem;
 }
 
+.false {
+  background-color: rgba(47, 79, 79, .7);
+}
+
 .logo {
   margin-left: 0;
   color: white;
   text-decoration: none;
-  font-size: 1.50rem;
+  font-size: 1.55rem;
+  font-weight: bold;
 }
 
 .logo-img {
@@ -42,7 +47,8 @@
 }
 
 .navbar-items a {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
   color: white;
   text-decoration: none;
   padding: 0 1rem;
@@ -51,6 +57,7 @@
 .navbar-items a:hover,
 .navbar-items a:active {
   color: rgb(38, 166, 154);
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
