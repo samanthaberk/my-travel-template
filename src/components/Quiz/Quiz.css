@@ -34,7 +34,7 @@
 
 form {
   text-align: center;
-  padding-top: 25%;
+  padding-top: 15%;
 }
 
 
@@ -145,7 +145,8 @@ form {
   color: rgb(245, 245, 245);
   font-size: 2rem;
   font-weight: bold;
-  margin: 25% 0 15% 0;
+  padding-top: .75rem;
+  margin: 15% 0 15% 0;
 }
 
 /* Btn Styling */

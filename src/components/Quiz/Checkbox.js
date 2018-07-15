@@ -6,7 +6,7 @@ import './Quiz.css';
 class Checkbox extends Component {
 
   onCheckboxClick = (props) => {
-      this.props.CurrentAnswerCallback(this.props.text);
+      this.props.currentAnswerCallback(this.props.text);
   }
   render() {
   return(
@@ -27,6 +27,7 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
+  currentAnswerCallback: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired
 };
 

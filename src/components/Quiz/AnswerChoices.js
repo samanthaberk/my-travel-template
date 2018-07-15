@@ -12,7 +12,9 @@ const answerChoices = (props) => {
         <Checkbox
           text={choice}
           key={choice}
-          value={choice}/>
+          value={choice}
+          currentAnswerCallback={props.onAnswerSelect}
+        />
       )
     });
   } else if (props.format === 'radio') {
@@ -22,7 +24,7 @@ const answerChoices = (props) => {
           text={choice}
           key={choice}
           value={choice}
-          CurrentAnswerCallback={props.onAnswerSelect}
+          currentAnswerCallback={props.onAnswerSelect}
         />
       )
     });

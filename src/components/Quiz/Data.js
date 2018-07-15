@@ -34,6 +34,7 @@ const data = {
       {
         tag: "cityTravel",
         text: "HOW WOULD YOU LIKE TO GET AROUND WITHIN A CITY? (SELECT ALL THAT APPLY)",
+        answerFormat: "checkbox",
         answerChoices: ["Walk", "Public transport", "Bike", "Taxi"]
       },
       {

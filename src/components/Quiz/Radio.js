@@ -6,7 +6,7 @@ import './Quiz.css';
 class Radio extends Component {
 
   onRadioClick = (event) => {
-    this.props.CurrentAnswerCallback(event.target.value);
+    this.props.currentAnswerCallback(event.target.value);
   }
 
   render() {
@@ -28,7 +28,7 @@ class Radio extends Component {
 }
 
 Radio.propTypes = {
-  CurrentAnswerCallback: PropTypes.func.isRequired,
+  currentAnswerCallback: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired
 };
 
