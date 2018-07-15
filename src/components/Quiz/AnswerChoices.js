@@ -35,9 +35,6 @@ const answerChoices = (props) => {
       <form>
       {answers}
       </form>
-      <a className="btn-floating" onClick={props.nextPageCallback}>
-        <i className="material-icons">play_arrow</i>
-      </a>
     </div>
   );
 }

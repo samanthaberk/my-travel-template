@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Link } from 'react-router-dom'
 
 import data from './Data';
 import QuestionSideBar from './QuestionSideBar';
@@ -27,7 +28,7 @@ class Quiz extends Component {
     };
 
   updateCurrentPage = () => {
-    if (this.state.number <= 10) {
+    if (this.state.number < 10) {
       const number = this.state.number + 1;
       const image = this.state.image + 1;
       const tag = data.questions[number-1].tag;
@@ -44,7 +45,6 @@ class Quiz extends Component {
         answerChoices: answerChoices,
       });
     }
-
   }
 
   updateCurrentAnswer = (answer) => {
@@ -57,11 +57,27 @@ class Quiz extends Component {
   }
 
   render() {
+
+    let button = null;
+
+    if (this.state.number < 10) {
+      button = (
+        <a className="btn-floating" onClick={this.updateCurrentPage}>
+          <i className="material-icons">play_arrow</i>
+        </a>
+      );
+    } else {
+      button = (
+        <Link to="/itinerary"> Go To Your Itinerary </Link>
+      );
+    }
+
     return (
-      <section className="row quiz">
-        <QuestionSideBar number={this.state.number} text={this.state.question} />
-        <AnswerChoices nextPageCallback={this.updateCurrentPage} onAnswerSelect={this.updateCurrentAnswer} format={this.state.answerFormat} answers= {this.state.answerChoices} image={this.state.image} />
-    </section>
+        <section className="row quiz">
+          <QuestionSideBar number={this.state.number} text={this.state.question} />
+          <AnswerChoices onAnswerSelect={this.updateCurrentAnswer} format={this.state.answerFormat} answers= {this.state.answerChoices} image={this.state.image} />
+          {button}
+        </section>
     );
   }
 };
