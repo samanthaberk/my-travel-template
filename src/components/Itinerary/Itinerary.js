@@ -11,7 +11,9 @@ import Footer from '../Home/Footer/Footer';
 class Itinerary extends Component {
   render() {
     return (
-      <h1>Itinerary</h1>
+      <div>
+        <h3>The duration is: {this.props.duration}</h3>
+      </div>
     );
   }
 }

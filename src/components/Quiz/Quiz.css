@@ -31,10 +31,11 @@
 }
 
 /* Images */
-
-form {
-  text-align: center;
-  padding-top: 15%;
+.answer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 
@@ -119,6 +120,9 @@ form {
 }
 
 /* Right-side Styles & Checkboxes */
+label {
+  padding: 6rem;
+}
 
 [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
   border: 2px solid rgb(245, 245, 245);
@@ -131,7 +135,7 @@ form {
   color: rgb(245, 245, 245);
   font-size: 2rem;
   font-weight: bold;
-  margin: 25% 0 15% 0;
+  margin: 10% 0;
 }
 
 [type="radio"]+span:not(.lever):before, [type="radio"]:not(.filled-in)+span:not(.lever):after {
@@ -145,7 +149,6 @@ form {
   color: rgb(245, 245, 245);
   font-size: 2rem;
   font-weight: bold;
-  padding-top: .75rem;
   margin: 15% 0 15% 0;
 }
 

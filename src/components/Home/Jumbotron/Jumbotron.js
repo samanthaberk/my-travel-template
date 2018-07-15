@@ -12,7 +12,8 @@ const jumbotron= (props) => (
         <i className="material-icons right"></i>
       </button>
     </Link>
-      <p><a href="#about">or scroll down to <span>learn more</span><span className="arrow-btn"><i className="medium material-icons">arrow_downward</i></span></a></p>
+      <p><a href="#about">or scroll down to <span>learn more</span></a></p>
+      <p><a href="#about"className="arrow-btn"><i className="medium material-icons">arrow_downward</i></a></p>
 
   </section>
 );

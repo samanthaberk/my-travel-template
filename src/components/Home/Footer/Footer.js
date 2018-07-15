@@ -15,7 +15,7 @@ const footer = (props) => (
           <h5 className="white-text">Menu</h5>
           <ul>
             <Link to={{pathname: '/quiz'}}>
-            <li><a href="#!">Create a Travel Template</a></li>
+            <li>Create a Travel Template</li>
             </Link>
             <li><a href="#about">About</a></li>
             <li><a href="#features">Features</a></li>

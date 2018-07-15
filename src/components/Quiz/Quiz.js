@@ -68,7 +68,7 @@ class Quiz extends Component {
       );
     } else {
       button = (
-        <Link to="/itinerary"> Go To Your Itinerary </Link>
+        <Link to="/itinerary" duration={this.state.duration}> Go To Your Itinerary </Link>
       );
     }
 
