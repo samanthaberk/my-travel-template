@@ -20,8 +20,8 @@ class Quiz extends Component {
         travelerType: null,
         pace: null,
         sites: null,
-        internalTravel: null,
-        cityTravel: null,
+        internalTravel: [],
+        cityTravel: [],
         travelParty: null,
         budget: null,
         interests: [],
@@ -49,6 +49,16 @@ class Quiz extends Component {
     }
   }
 
+  updateMultipleAnswers = (answer) => {
+    const oldState = this.state.userAnswers[this.state.tag];
+    const updatedState = answer;
+    const updatedUserAnswers = {
+      ...this.state.userAnswers
+    };
+    updatedUserAnswers[this.state.tag].push(updatedState);
+    this.setState( { userAnswers: updatedUserAnswers } );
+  }
+
   updateCurrentAnswer = (answer) => {
     const oldState = this.state.userAnswers[this.state.tag];
     const updatedState = answer;
@@ -70,13 +80,15 @@ class Quiz extends Component {
         </a>
       );
     } else {
+
       button = (
         <Link to={{
             pathname: "/itinerary",
             state: {
-              duration: this.state.duration
+              duration: `${this.state.duration}`,
             }
-          }}>
+        }}>
+
           <button className="btn waves-effect waves-light">
             Go To Your Itinerary
           </button>
@@ -87,7 +99,7 @@ class Quiz extends Component {
     return (
         <section className="row quiz">
           <QuestionSideBar number={this.state.number} text={this.state.question} />
-          <AnswerChoices onAnswerSelect={this.updateCurrentAnswer} format={this.state.answerFormat} answers= {this.state.answerChoices} image={this.state.image} />
+          <AnswerChoices onCheckboxSelect={this.updateMultipleAnswers} onAnswerSelect={this.updateCurrentAnswer} format={this.state.answerFormat} answers= {this.state.answerChoices} image={this.state.image} />
           {button}
         </section>
     );

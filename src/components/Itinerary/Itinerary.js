@@ -9,10 +9,13 @@ import Features from '../Home/Features/Features';
 import Footer from '../Home/Footer/Footer';
 
 class Itinerary extends Component {
+
   render() {
+    console.log(this.props.location.state);
+
     return (
       <div>
-        <h3>The duration is: {this.state.duration}</h3>
+        <h3>The duration is:</h3>
       </div>
     );
   }

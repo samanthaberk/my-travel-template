@@ -13,7 +13,7 @@ const answerChoices = (props) => {
           text={choice}
           key={choice}
           value={choice}
-          currentAnswerCallback={props.onAnswerSelect}
+          checkboxAnswerCallback={props.onCheckboxSelect}
         />
       )
     });
@@ -41,11 +41,11 @@ const answerChoices = (props) => {
 
 
 answerChoices.propTypes = {
-  nextPageCallback: PropTypes.func.isRequired,
+  onCheckboxSelect: PropTypes.func.isRequired,
   onAnswerSelect: PropTypes.func.isRequired,
   format: PropTypes.string.isRequired,
   answers: PropTypes.array.isRequired,
-  image: PropTypes.string.isRequired
+  image: PropTypes.number.isRequired
 };
 
 
