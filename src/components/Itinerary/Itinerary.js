@@ -11,11 +11,14 @@ import Footer from '../Home/Footer/Footer';
 class Itinerary extends Component {
 
   render() {
-    console.log(this.props.location.state);
-
     return (
       <div>
-        <h3>The duration is:</h3>
+        <h3>The duration is: {this.props.userAnswers.duration}</h3>
+        <h3>The traveler type is: {this.props.userAnswers.travelerType}</h3>
+        <h3>The pace is: {this.props.userAnswers.pace}</h3>
+        <h3>The sites is: {this.props.userAnswers.sites}</h3>
+        <h3>The travelParty is: {this.props.userAnswers.travelParty}</h3>
+        <h3>The budget is: {this.props.userAnswers.budget}</h3>           
       </div>
     );
   }

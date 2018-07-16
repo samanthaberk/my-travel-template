@@ -69,6 +69,10 @@ class Quiz extends Component {
     this.setState( { userAnswers: updatedUserAnswers } );
   }
 
+  onBtnClick = () => {
+    this.props.changeState(this.state.userAnswers);
+  }
+
   render() {
 
     let button = null;
@@ -84,10 +88,8 @@ class Quiz extends Component {
       button = (
         <Link to={{
             pathname: "/itinerary",
-            state: {
-              duration: `${this.state.duration}`,
-            }
-        }}>
+
+        }} onClick={this.onBtnClick}>
 
           <button className="btn waves-effect waves-light">
             Go To Your Itinerary
