@@ -12,7 +12,7 @@ class Itinerary extends Component {
   render() {
     return (
       <div>
-        <h3>The duration is: {this.props.duration}</h3>
+        <h3>The duration is: {this.state.duration}</h3>
       </div>
     );
   }

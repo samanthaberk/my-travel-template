@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import data from './Data';
 import QuestionSideBar from './QuestionSideBar';
@@ -15,16 +15,18 @@ class Quiz extends Component {
       answerFormat: data.questions[0].answerFormat,
       answerChoices: data.questions[0].answerChoices,
       image: 1,
-      duration: null,
-      travelerType: null,
-      pace: null,
-      sites: null,
-      internalTravel: null,
-      cityTravel: null,
-      travelParty: null,
-      budget: null,
-      interests: [],
-      entertainment: []
+      userAnswers : {
+        duration: null,
+        travelerType: null,
+        pace: null,
+        sites: null,
+        internalTravel: null,
+        cityTravel: null,
+        travelParty: null,
+        budget: null,
+        interests: [],
+        entertainment: []
+      }
     };
 
   updateCurrentPage = () => {
@@ -48,12 +50,13 @@ class Quiz extends Component {
   }
 
   updateCurrentAnswer = (answer) => {
-    const tag = this.state.tag;
-    console.log(tag);
-    console.log(answer);
-    this.setState({
-      tag: answer
-    });
+    const oldState = this.state.userAnswers[this.state.tag];
+    const updatedState = answer;
+    const updatedUserAnswers = {
+      ...this.state.userAnswers
+    };
+    updatedUserAnswers[this.state.tag] = updatedState;
+    this.setState( { userAnswers: updatedUserAnswers } );
   }
 
   render() {
@@ -68,7 +71,16 @@ class Quiz extends Component {
       );
     } else {
       button = (
-        <Link to="/itinerary" duration={this.state.duration}> Go To Your Itinerary </Link>
+        <Link to={{
+            pathname: "/itinerary",
+            state: {
+              duration: this.state.duration
+            }
+          }}>
+          <button className="btn waves-effect waves-light">
+            Go To Your Itinerary
+          </button>
+        </Link>
       );
     }
 
