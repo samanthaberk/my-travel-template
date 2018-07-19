@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 
 import City from './City';
-import MorningActivity from './MorningActivity';
-import AfternoonActivity from './AfternoonActivity';
-import EveningActivity from './EveningActivity';
+import Activity from './Activity';
 
 class Itinerary extends Component {
   constructor(props) {
@@ -38,14 +36,18 @@ class Itinerary extends Component {
     const cities = data.map((city, index) => {
       return (
         <section>
+
           <City
             key={index}
             day={index + 1}
             city={city}
           />
-          <MorningActivity />
-          <AfternoonActivity />
-          <EveningActivity />
+          <Activity
+            key={index}
+            day={index + 1}
+            lastDay={data.length}
+          />
+
         </section>
       )
     });
@@ -66,7 +68,6 @@ class Itinerary extends Component {
 
           <div className="col s9">
             <h3>{cities}</h3>
-            <hr />
           </div>
 
         </div>
