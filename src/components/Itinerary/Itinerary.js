@@ -1,30 +1,23 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
-import Navbar from '../Home/Navbar/Navbar';
-import SideBar from '../Home/SideBar/SideBar';
-import Backdrop from '../Home/Backdrop/Backdrop';
-import Jumbotron from '../Home/Jumbotron/Jumbotron';
-import About from '../Home/About/About';
-import Features from '../Home/Features/Features';
-import Footer from '../Home/Footer/Footer';
+import City from './City';
 
 class Itinerary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      template: 'hardcoded value'
+      template: 'Please Wait...'
     };
 
   }
 
   componentDidMount = () => {
-    // const duration = this.props.userAnswers.duration;
-    // const travelerType = this.props.userAnswers.travelerType;
-    // const pace = this.props.userAnswers.pace;
-    // const transport = this.props.userAnswers.internalTravel.sort().join(', ');
-    // const TEMPLATES_URL = `http://localhost:8080/templates/duration/${duration}/travelers/${travelerType}/pace/${pace}/transport/${transport}`;
-    const TEMPLATES_URL = 'http://localhost:8080/templates/duration/1%20Week/travelers/First-Timer/pace/Average%20Pace/transport/Internal%20Flights,%20Train';
+    const duration = this.props.userAnswers.duration;
+    const travelerType = this.props.userAnswers.travelerType;
+    const pace = this.props.userAnswers.pace;
+    const transport = this.props.userAnswers.internalTravel.sort().join(', ');
+    const TEMPLATES_URL = `http://localhost:8080/templates/duration/${duration}/travelers/${travelerType}/pace/${pace}/transport/${transport}`;
     axios.get(TEMPLATES_URL)
       .then(response => {
         console.log(response);
@@ -38,7 +31,17 @@ class Itinerary extends Component {
   }
 
   render() {
-
+    let data = this.state.template.split(",");
+    console.log(data);
+    const cities = data.map((city, index) => {
+      return (
+        <City
+          key={index}
+          day={index + 1}
+          city={city}
+        />
+      )
+    });
 
     return (
       <div>
@@ -54,7 +57,7 @@ class Itinerary extends Component {
           </div>
 
           <div className="col s9">
-            <h3>template: {this.state.template}</h3>
+            <h3>{cities}</h3>
           </div>
 
         </div>
