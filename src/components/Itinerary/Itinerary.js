@@ -8,7 +8,7 @@ class Itinerary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      template: 'Please Wait...'
+      template: null
     };
 
   }
@@ -32,32 +32,33 @@ class Itinerary extends Component {
   }
 
   render() {
-    let data = this.state.template.split(",");
-    const cities = data.map((city, index) => {
-      return (
-        <section>
+    let cities;
+    if (this.state.template === null) {
+      cities = <div><h3>Loading...</h3></div>;
 
-          <City
-            key={index}
-            day={index + 1}
-            city={city}
-          />
-          <Activity
-            key={index}
-            day={index + 1}
-            lastDay={data.length}
-            city={city}
-            type={this.props.userAnswers.travelerType}
-            budget={this.props.userAnswers.budget}
-            pace={this.props.userAnswers.pace}
-            sites={this.props.userAnswers.sites}
-            internalTravel={this.props.userAnswers.internalTravel}
-            interests={this.props.userAnswers.interests}
-            entertainment={this.props.userAnswers.entertainment}
-          />
-        </section>
-      )
-    });
+    } else {
+      let data = this.state.template.split(",");
+      cities = data.map((city, index) => {
+        return (
+          <section>
+
+            <City
+              key={index}
+              day={index + 1}
+              city={city}
+            />
+            <Activity
+              key={'activity'+index}
+              day={index + 1}
+              lastDay={data.length}
+              city={city}
+              userAnswers={this.props.userAnswers}
+
+            />
+          </section>
+        )
+      });
+    }
 
 
     return (
@@ -78,15 +79,7 @@ class Itinerary extends Component {
           </div>
 
         </div>
-        {/*
-        // <h3>The duration is: {this.props.userAnswers.duration}</h3>
-        // <h3>The traveler type is: {this.props.userAnswers.travelerType}</h3>
-        // <h3>The pace is: {this.props.userAnswers.pace}</h3>
-        // <h3>The sites is: {this.props.userAnswers.sites}</h3>
-        // <h3>The travelParty is: {this.props.userAnswers.travelParty}</h3>
-        // <h3>The budget is: {this.props.userAnswers.budget}</h3>
-        // <h3>Your internal travel preferences are: {this.props.userAnswers.internalTravel}</h3>
-        */}
+
       </div>
     );
   }

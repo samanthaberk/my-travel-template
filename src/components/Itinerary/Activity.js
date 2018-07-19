@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import ActivityDetails from './ActivityDetails';
 
 class Activity extends Component {
   constructor() {
     super();
-    this.state = {
-      activity: 'Please Wait...'
-    };
+
   }
 
   render() {
+    console.log(this.props.city);
+    let city = this.props.city;
 
     if(this.props.day === 1) {
       return (
-        <h5>Evening Activity</h5>
+        <ActivityDetails userAnswers={this.props.userAnswers} city={city}/>
       );
     } else if (this.props.day === this.props.lastDay) {
       return (
@@ -33,16 +34,7 @@ class Activity extends Component {
 }
 
 Activity.propTypes = {
-  day: PropTypes.number.isRequired,
-  lastDay: PropTypes.number.isRequired,
-  city: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  budget: PropTypes.string.isRequired,
-  pace: PropTypes.string.isRequired,
-  sites: PropTypes.string.isRequired,
-  internalTravel: PropTypes.string.isRequired,
-  interests: PropTypes.string.isRequired,
-  entertainment: PropTypes.string.isRequired,
+  userAnswers: PropTypes.object.isRequired,
 };
 
 export default Activity;
