@@ -46,8 +46,15 @@ class Itinerary extends Component {
             key={index}
             day={index + 1}
             lastDay={data.length}
+            city={city}
+            type={this.props.userAnswers.travelerType}
+            budget={this.props.userAnswers.budget}
+            pace={this.props.userAnswers.pace}
+            sites={this.props.userAnswers.sites}
+            internalTravel={this.props.userAnswers.internalTravel}
+            interests={this.props.userAnswers.interests}
+            entertainment={this.props.userAnswers.entertainment}
           />
-
         </section>
       )
     });
