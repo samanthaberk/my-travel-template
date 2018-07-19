@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import axios from 'axios';
 
 import City from './City';
+import MorningActivity from './MorningActivity';
+import AfternoonActivity from './AfternoonActivity';
+import EveningActivity from './EveningActivity';
 
 class Itinerary extends Component {
   constructor(props) {
@@ -32,16 +35,21 @@ class Itinerary extends Component {
 
   render() {
     let data = this.state.template.split(",");
-    console.log(data);
     const cities = data.map((city, index) => {
       return (
-        <City
-          key={index}
-          day={index + 1}
-          city={city}
-        />
+        <section>
+          <City
+            key={index}
+            day={index + 1}
+            city={city}
+          />
+          <MorningActivity />
+          <AfternoonActivity />
+          <EveningActivity />
+        </section>
       )
     });
+
 
     return (
       <div>
@@ -58,6 +66,7 @@ class Itinerary extends Component {
 
           <div className="col s9">
             <h3>{cities}</h3>
+            <hr />
           </div>
 
         </div>
