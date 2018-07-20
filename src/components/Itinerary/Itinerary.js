@@ -14,9 +14,7 @@ class Itinerary extends Component {
   }
 
   componentDidMount = () => {
-    const duration = this.props.userAnswers.duration;
-    const travelerType = this.props.userAnswers.travelerType;
-    const pace = this.props.userAnswers.pace;
+    const {duration, travelerType, pace} = this.props.userAnswers;
     const transport = this.props.userAnswers.internalTravel.sort().join(', ');
     const TEMPLATES_URL = `http://localhost:8080/templates/duration/${duration}/travelers/${travelerType}/pace/${pace}/transport/${transport}`;
     axios.get(TEMPLATES_URL)
@@ -32,6 +30,7 @@ class Itinerary extends Component {
   }
 
   render() {
+
     let cities;
     if (this.state.template === null) {
       cities = <div><h3>Loading...</h3></div>;

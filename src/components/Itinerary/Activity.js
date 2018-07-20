@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import ActivityDetails from './ActivityDetails';
 
 class Activity extends Component {
-  constructor() {
-    super();
-
-  }
 
   render() {
     console.log(this.props.city);
@@ -15,18 +10,18 @@ class Activity extends Component {
 
     if(this.props.day === 1) {
       return (
-        <ActivityDetails userAnswers={this.props.userAnswers} city={city}/>
+        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" />
       );
     } else if (this.props.day === this.props.lastDay) {
       return (
-        <h5>Morning Activity</h5>
+        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" />
       );
     } else {
       return(
         <section>
-          <h5>Morning Activity</h5>
-          <h5>Afternoon Activity</h5>
-          <h5>Evening Activity</h5>
+          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" />
+          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="afternoon" />
+          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" />
         </section>
       );
     }

@@ -50,7 +50,6 @@ class Quiz extends Component {
   }
 
   updateMultipleAnswers = (answer) => {
-    const oldState = this.state.userAnswers[this.state.tag];
     const updatedState = answer;
     const updatedUserAnswers = {
       ...this.state.userAnswers
@@ -60,7 +59,6 @@ class Quiz extends Component {
   }
 
   updateCurrentAnswer = (answer) => {
-    const oldState = this.state.userAnswers[this.state.tag];
     const updatedState = answer;
     const updatedUserAnswers = {
       ...this.state.userAnswers

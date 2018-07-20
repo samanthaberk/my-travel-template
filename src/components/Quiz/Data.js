@@ -59,7 +59,7 @@ const data = {
         tag: "entertainment",
         text: "RATE YOUR INTEREST IN THE FOLLOWING...",
         answerFormat: "checkbox",
-        answerChoices: ["Music", "Bars/Pubs", "Clubs/Lounges", "Events & Festivals", "Family Fun", "Culture Shows", "Lectures"]
+        answerChoices: ["Music", "Bars & Pubs", "Clubs & Lounges", "Events & Festivals", "Family Fun", "Culture Shows", "Lectures"]
       }
     ]
 };
