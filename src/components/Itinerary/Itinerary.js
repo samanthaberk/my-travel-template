@@ -36,7 +36,7 @@ class Itinerary extends Component {
       cities = <div><h3>Loading...</h3></div>;
 
     } else {
-      let data = this.state.template.split(",");
+      let data = this.state.template.split(", ");
       cities = data.map((city, index) => {
         return (
           <section>
