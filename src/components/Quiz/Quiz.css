@@ -65,7 +65,7 @@
 
 .pg-4 {
   height: 100%;
-  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/mountainTemple.JPG');
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/mountainTemple.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -81,7 +81,7 @@
 
 .pg-6 {
   height: 100%;
-  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/shanghai.JPG');
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/shanghai.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -89,7 +89,7 @@
 
 .pg-7 {
   height: 100%;
-  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/riceTerrace.JPG');
+  background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, .5)), url('./Images/riceTerrace.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
