@@ -5,23 +5,22 @@ import ActivityDetails from './ActivityDetails';
 class Activity extends Component {
 
   render() {
-    console.log(this.props.city);
     let city = this.props.city;
 
     if(this.props.day === 1) {
       return (
-        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" />
+        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" handleActivityList={this.props.updateActivityState}/>
       );
     } else if (this.props.day === this.props.lastDay) {
       return (
-        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" />
+        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" handleActivityList={this.props.updateActivityState}/>
       );
     } else {
       return(
         <section>
-          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" />
-          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="afternoon" />
-          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" />
+          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" handleActivityList={this.props.updateActivityState}/>
+          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="afternoon" handleActivityList={this.props.updateActivityState}/>
+          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" handleActivityList={this.props.updateActivityState}/>
         </section>
       );
     }

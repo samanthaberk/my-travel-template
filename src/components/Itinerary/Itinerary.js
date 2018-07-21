@@ -8,9 +8,18 @@ class Itinerary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      template: null
+      template: null,
+      activities: []
     };
 
+  }
+
+  updateActivities = (id) => {
+    const activityList = [...this.state.activities, id];
+    this.setState({
+      activities: activityList
+    })
+    console.log(this.state.activities);
   }
 
   componentDidMount = () => {
@@ -52,6 +61,7 @@ class Itinerary extends Component {
               lastDay={data.length}
               city={city}
               userAnswers={this.props.userAnswers}
+              updateActivityState={this.updateActivities}
 
             />
           </section>
