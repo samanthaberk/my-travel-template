@@ -9,34 +9,45 @@ class ActivityDetails extends Component {
     };
   }
 
-  componentDidMount() {
-
+  getActivity() {
     const {travelParty, budget, pace, sites} = this.props.userAnswers;
     const cityTravel = this.props.userAnswers.cityTravel.sort().join(', ');
     const interests = this.props.userAnswers.interests.sort().join(', ');
     const entertainment = this.props.userAnswers.entertainment.sort().join(', ');
 
-    const currentActivities = this.props.activities;
-    console.log(`currentActivities: ${currentActivities}`);
     const city = this.props.city;
     const timeOfDay = this.props.timeOfDay;
 
-    const ACTIVITY_URL = `http://localhost:8080/filter/${city}/${timeOfDay}/${travelParty}/${budget}/${pace}/${sites}/${cityTravel}/${interests}/${entertainment}/1`;
-    console.log(ACTIVITY_URL);
-    axios.get(ACTIVITY_URL)
-      .then(response => {
-        const newActivity = response.data.content;
-        const updatedActivityId = response.data.id;
-        this.props.handleActivityList(updatedActivityId);
+    const currentActivities = this.props.activities;
+    console.log(`currentActivities: ${currentActivities}`);
 
-        this.setState({
-          activity: newActivity,
-        });
-      })
-      .catch(function(error) {
-        console.log(error.message);
-      });
+    const ACTIVITY_URL = `http://localhost:8080/filter/${city}/${timeOfDay}/${travelParty}/${budget}/${pace}/${sites}/${cityTravel}/${interests}/${entertainment}/${currentActivities}`;
+    console.log(ACTIVITY_URL);
+
+    axios.get(ACTIVITY_URL)
+    .then(response => {
+      const newActivity = response.data.content;
+      const updatedActivityId = response.data.id;
+      this.props.handleActivityList(updatedActivityId);
+
+      this.setState({activity: newActivity});
+    })
+    .catch(function(error) {
+      console.log(error.message);
+    });
+  }
+
+  componentDidMount() {
+    this.getActivity();
+  }
+
+  componentDidUpdate(prevProps) {
+    if(prevProps.activities !== this.props.activities) {
+      this.getActivity();
     }
+  }
+
+
   render () {
     return (
       <div>{this.state.activity}</div>
