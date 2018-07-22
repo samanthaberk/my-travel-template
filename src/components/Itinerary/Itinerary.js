@@ -17,7 +17,7 @@ class Itinerary extends Component {
     const activityList = [...this.state.activities, id];
     this.setState({
       activities: activityList
-    }
+    })
   }
 
   componentDidMount = () => {
