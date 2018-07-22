@@ -9,18 +9,43 @@ class Activity extends Component {
 
     if(this.props.day === 1) {
       return (
-        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" handleActivityList={this.props.updateActivityState}/>
+        <ActivityDetails
+          userAnswers={this.props.userAnswers}
+          city={city}
+          timeOfDay="evening"
+          handleActivityList={this.props.updateActivityState}
+          activities={this.props.activityList}/>
+
       );
     } else if (this.props.day === this.props.lastDay) {
       return (
-        <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" handleActivityList={this.props.updateActivityState}/>
+        <ActivityDetails
+          userAnswers={this.props.userAnswers}
+          city={city} timeOfDay="morning"
+          handleActivityList={this.props.updateActivityState}
+          activities={this.props.activityList} />
       );
     } else {
       return(
         <section>
-          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="morning" handleActivityList={this.props.updateActivityState}/>
-          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="afternoon" handleActivityList={this.props.updateActivityState}/>
-          <ActivityDetails userAnswers={this.props.userAnswers} city={city} timeOfDay="evening" handleActivityList={this.props.updateActivityState}/>
+          <ActivityDetails
+            userAnswers={this.props.userAnswers}
+            city={city}
+            timeOfDay="morning"
+            handleActivityList={this.props.updateActivityState}
+            activities={this.props.activityList} />
+          <ActivityDetails
+            userAnswers={this.props.userAnswers}
+            city={city}
+            timeOfDay="afternoon"
+            handleActivityList={this.props.updateActivityState}
+            activities={this.props.activityList} />
+          <ActivityDetails
+            userAnswers={this.props.userAnswers}
+            city={city}
+            timeOfDay="evening"
+            handleActivityList={this.props.updateActivityState}
+            activities={this.props.activityList} />
         </section>
       );
     }
