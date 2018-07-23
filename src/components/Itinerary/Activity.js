@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import ActivityDetails from './ActivityDetails';
-import HTML5Backend from 'react-dnd-html5-backend';
-import { DragDropContext } from 'react-dnd';
 
 class Activity extends Component {
 
@@ -53,4 +51,4 @@ Activity.propTypes = {
   userAnswers: PropTypes.object.isRequired,
 };
 
-export default DragDropContext (HTML5Backend)(Activity);
+export default Activity;

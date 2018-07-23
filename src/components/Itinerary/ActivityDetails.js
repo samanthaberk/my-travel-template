@@ -1,24 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
-
-import { DragSource } from 'react-dnd';
-
-const activitySource = {
-  beginDrag(props) {
-    return props.ActivityDetails;
-  },
-  endDrag(props, monitor, component) {
-    return props.handleDrop(props.ActivityDetails.id);
-  }
-}
-
-function collect(connect, monitor) {
-  return {
-    connectDragSource: connect.dragSource(),
-    connectDragPreview: connect.dragPreview(),
-    isDragging: monitor.isDragging()
-  }
-}
+import Draggable, {DraggableCore} from 'react-draggable';
 
 class ActivityDetails extends Component {
   constructor() {
@@ -59,15 +41,19 @@ class ActivityDetails extends Component {
   componentDidMount() {
     this.getActivity();
     }
-  render () {
-    const { isDragging, connectDragSource, activityDetails } = this.props
 
-    return connectDragSource(
-      <div>{this.state.activity}</div>
+  render () {
+
+    return (
+      <Draggable>
+      <div>
+        {this.state.activity}
+      </div>
+      </Draggable>
     );
   }
 
 }
 
 
-export default DragSource('ActivityDetail', activitySource, collect)(ActivityDetails);
+export default ActivityDetails;
