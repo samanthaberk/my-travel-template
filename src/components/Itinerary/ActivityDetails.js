@@ -1,11 +1,30 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
+import { DragSource } from 'react-dnd';
+
+const activitySource = {
+  beginDrag(props) {
+    return props.ActivityDetails;
+  },
+  endDrag(props, monitor, component) {
+    return props.handleDrop(props.ActivityDetails.id);
+  }
+}
+
+function collect(connect, monitor) {
+  return {
+    connectDragSource: connect.dragSource(),
+    connectDragPreview: connect.dragPreview(),
+    isDragging: monitor.isDragging()
+  }
+}
+
 class ActivityDetails extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      activity: 'Loading...',
+      activity: 'something'
     };
   }
 
@@ -18,7 +37,7 @@ class ActivityDetails extends Component {
     const city = this.props.city;
     const timeOfDay = this.props.timeOfDay;
 
-    const currentActivities = this.props.activities;
+    const currentActivities = this.props.currentActivities;
     console.log(`currentActivities: ${currentActivities}`);
 
     const ACTIVITY_URL = `http://localhost:8080/filter/${city}/${timeOfDay}/${travelParty}/${budget}/${pace}/${sites}/${cityTravel}/${interests}/${entertainment}/${currentActivities}`;
@@ -39,17 +58,11 @@ class ActivityDetails extends Component {
 
   componentDidMount() {
     this.getActivity();
-  }
-
-  componentDidUpdate(prevProps) {
-    if(prevProps.activities !== this.props.activities) {
-      this.getActivity();
     }
-  }
-
-
   render () {
-    return (
+    const { isDragging, connectDragSource, activityDetails } = this.props
+
+    return connectDragSource(
       <div>{this.state.activity}</div>
     );
   }
@@ -57,4 +70,4 @@ class ActivityDetails extends Component {
 }
 
 
-export default ActivityDetails;
+export default DragSource('ActivityDetail', activitySource, collect)(ActivityDetails);

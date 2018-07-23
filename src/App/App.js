@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 import Home from '../components/Home/Home';
 import Quiz from '../components/Quiz/Quiz';
-import Itinerary from '../components/Itinerary/Itinerary'
+import Itinerary from '../components/Itinerary/Itinerary';
 
 import './App.css';
 

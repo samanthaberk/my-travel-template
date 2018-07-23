@@ -9,13 +9,16 @@ class Itinerary extends Component {
     super(props);
     this.state = {
       template: null,
-      activities: []
+      activities: [0]
     };
+
   }
 
   updateActivities = (id) => {
     const activityList = [...this.state.activities, id];
-    this.setState({activities: activityList})
+    this.setState({
+      activities: activityList
+    })
     console.log(this.state.activities);
   }
 
@@ -25,6 +28,7 @@ class Itinerary extends Component {
     const TEMPLATES_URL = `http://localhost:8080/templates/duration/${duration}/travelers/${travelerType}/pace/${pace}/transport/${transport}`;
     axios.get(TEMPLATES_URL)
       .then(response => {
+        console.log(response);
         this.setState({
           template: response.data[0].content
         });
@@ -35,9 +39,11 @@ class Itinerary extends Component {
   }
 
   render() {
+
     let cities;
     if (this.state.template === null) {
       cities = <div><h3>Loading...</h3></div>;
+
     } else {
       let data = this.state.template.split(", ");
       cities = data.map((city, index) => {
@@ -50,13 +56,13 @@ class Itinerary extends Component {
               city={city}
             />
             <Activity
-              key={`${city}${index}`}
+              key={'activity'+index}
               day={index + 1}
               lastDay={data.length}
               city={city}
               userAnswers={this.props.userAnswers}
               updateActivityState={this.updateActivities}
-              activityList={this.state.activities.join(', ')}
+              activityIds={this.state.activities}
             />
           </section>
         )
