@@ -6,7 +6,6 @@ import Home from '../components/Home/Home';
 import Quiz from '../components/Quiz/Quiz';
 import Itinerary from '../components/Itinerary/Itinerary';
 import NotFound from '../components/NotFound/NotFound';
-import LoginPage from '../components/auth/LoginPage';
 
 import './App.css';
 
@@ -36,7 +35,6 @@ class App extends Component {
           <Route path="/itinerary" exact
           render={ (props) => <Itinerary {...props} userAnswers={ this.state.userAnswers } />}
           />
-          <Route path="/login" component={LoginPage}/>
           <Route component={NotFound} />
           </Switch>
       </BrowserRouter>
