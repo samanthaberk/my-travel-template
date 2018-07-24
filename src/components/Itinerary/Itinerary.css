@@ -1,0 +1,27 @@
+.row {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.itinerary-container {
+  height: 100%;
+}
+
+.itinerary-side-panel {
+  background-color: rgb(38, 166, 154);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(245, 245, 245);
+  font-weight: bold;
+}
+
+.itinerary-main-content {
+  background-color: rgb(247 249 249);
+  height: 1000%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(47,79,79);
+}

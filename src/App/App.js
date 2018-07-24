@@ -28,14 +28,14 @@ class App extends Component {
     return (
       <BrowserRouter>
           <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/quiz"
-          render={ (props) => <Quiz {...props} changeState={ this.updateState } />}
-          />
-          <Route path="/itinerary" exact
-          render={ (props) => <Itinerary {...props} userAnswers={ this.state.userAnswers } />}
-          />
-          <Route component={NotFound} />
+            <Route path="/" exact component={Home}/>
+            <Route path="/quiz"
+            render={ (props) => <Quiz {...props} changeState={ this.updateState } />}
+            />
+            <Route path="/itinerary" exact
+            render={ (props) => <Itinerary {...props} userAnswers={ this.state.userAnswers } />}
+            />
+            <Route component={NotFound} />
           </Switch>
       </BrowserRouter>
     );
