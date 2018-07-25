@@ -61,6 +61,7 @@ class Itinerary extends Component {
   }
 
   render() {
+
     if (this.state.template !== null && this.state.hasBeenCalled !== true) {
       this.createItinerary();
     }
@@ -87,6 +88,8 @@ class Itinerary extends Component {
 
     return (
       <div className="itinerary-container">
+
+        <img className="itinerary-img" src={require('./forbidden-palace.jpg')} />
 
         <div className="row">
 

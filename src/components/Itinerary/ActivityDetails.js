@@ -8,9 +8,7 @@ class ActivityDetails extends Component {
 
     return (
       <Draggable>
-      <div>
-        <h5>{content}</h5>
-      </div>
+        <div className='activity-item'>{content}</div>
       </Draggable>
     );
   }
