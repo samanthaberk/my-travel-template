@@ -20,7 +20,7 @@ class Itinerary extends Component {
   componentDidMount = () => {
     const {duration, travelerType, pace} = this.props.userAnswers;
     const transport = this.props.userAnswers.internalTravel.sort().join(', ');
-    const TEMPLATES_URL = `http://localhost:8080/templates/duration/${duration}/travelers/${travelerType}/pace/${pace}/transport/${transport}`;
+    const TEMPLATES_URL = `https://mytraveltemplate-api.herokuapp.com/templates/duration/${duration}/travelers/${travelerType}/pace/${pace}/transport/${transport}`;
     axios.get(TEMPLATES_URL)
       .then(response => {
         console.log(response);
@@ -47,7 +47,7 @@ class Itinerary extends Component {
     }
 
     console.log(userAnswers);
-    axios.post(`http://localhost:8080/getActivities`, userAnswers)
+    axios.post(`https://mytraveltemplate-api.herokuapp.com/getActivities`, userAnswers)
     .then(response => {
       console.log(response);
       this.setState({

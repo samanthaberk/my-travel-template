@@ -22,13 +22,13 @@ class Activity extends Component {
         <div>
           <h3 className="itinerary-heading">Day {day}: {this.props.city} </h3>
           <div className="itinerary-underline"></div>
-          <ActivityDetails content={this.props.content} />
+          <ActivityDetails className="activity-details" content={this.props.content} />
         </div>
       );
     } else {
       return (
         <div>
-          <ActivityDetails content={this.props.content} />
+          <ActivityDetails className="activity-details" content={this.props.content} />
         </div>
       );
     }
