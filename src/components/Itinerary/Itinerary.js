@@ -93,7 +93,6 @@ class Itinerary extends Component {
           <div className="col s3 itinerary-side-panel">
             <h3>Destination <span>China</span></h3>
             <p><span>欢迎</span>, welcome to China!</p>
-
           </div>
 
           <div className="col s9 itinerary-main-content">

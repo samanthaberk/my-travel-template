@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import ActivityDetails from './ActivityDetails';
+import Draggable, {DraggableCore} from 'react-draggable';
 
 class Activity extends Component {
 
@@ -20,7 +20,8 @@ class Activity extends Component {
       (this.props.index - 1) % 3 === 0)  {
       return(
         <div>
-          <h3>Day {day}: {this.props.city} </h3>
+          <h3 className="itinerary-heading">Day {day}: {this.props.city} </h3>
+          <div className="itinerary-underline"></div>
           <h5>{this.props.content}</h5>
         </div>
       );
