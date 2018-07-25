@@ -151,9 +151,9 @@ label {
 
 [type="radio"]+span:not(.lever) {
   color: rgb(245, 245, 245);
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: bold;
-  margin: 15% 0;
+  margin: 10% 0;
 }
 
 /* Btn Styling */
@@ -171,6 +171,16 @@ label {
   line-height: 75px;
   font-size: 4rem;
   float: right;
+}
+
+.submit-btn {
+  font-size: 1.1rem;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-top: 10%;
+  margin: 2rem;
 }
 
 

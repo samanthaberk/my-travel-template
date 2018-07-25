@@ -89,9 +89,9 @@ class Quiz extends Component {
 
         }} onClick={this.onBtnClick}>
 
-          <button className="btn waves-effect waves-light">
-            Go To Your Itinerary
-          </button>
+        <button className="submit-btn btn waves-effect waves-light" name="action">Go To Your Itinerary
+          <i className="material-icons right">send</i>
+        </button>
         </Link>
       );
     }
