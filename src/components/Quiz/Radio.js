@@ -12,15 +12,10 @@ class Radio extends Component {
   render() {
   return(
 
-    <div>
-      <div className="col s12 m6 l6">
-          <label>
+          <label className="radio">
             <input className="with-gap" value={this.props.text} name="question-1" type="radio" onClick={this.onRadioClick} />
-            <span>{this.props.text}</span>
+            <span className="answer-text">{this.props.text}</span>
           </label>
-      </div>
-    </div>
-
   );
   }
 }

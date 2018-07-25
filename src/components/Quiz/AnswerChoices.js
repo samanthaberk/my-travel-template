@@ -32,9 +32,7 @@ const answerChoices = (props) => {
 
   return (
     <div className={`answer-container col s8 pg-${props.image}`}>
-      <form>
       {answers}
-      </form>
     </div>
   );
 }

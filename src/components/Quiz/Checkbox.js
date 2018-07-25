@@ -10,18 +10,10 @@ class Checkbox extends Component {
   }
   render() {
   return(
-
-    <div>
-      <div className="col s12 m6 l6">
-        <p>
-          <label>
+          <label className="checkbox">
             <input type="checkbox" onClick={this.onCheckboxClick}/>
-            <span>{this.props.text}</span>
+            <span className="answer-text">{this.props.text}</span>
           </label>
-        </p>
-      </div>
-    </div>
-
   );
   }
 }
