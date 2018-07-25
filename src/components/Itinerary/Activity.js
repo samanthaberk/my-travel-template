@@ -5,37 +5,30 @@ import ActivityDetails from './ActivityDetails';
 class Activity extends Component {
 
   render() {
-    let city = this.props.city;
+    let day;
+    if (this.props.index === 0) {
+      day = 1;
+    } else if (this.props.index === 1) {
+      day = 2;
+    } else {
+      day = Math.floor((this.props.index / 3) + 2)
+    }
 
-    if(this.props.day === 0) {
-      return (
+    if (
+      this.props.index === 0 ||
+      this.props.index === 1 ||
+      (this.props.index - 1) % 3 === 0)  {
+      return(
         <div>
-          <ActivityDetails content={this.props.content} />
-        </div>
-      );
-
-    } else if (this.props.day === this.props.lastDay) {
-      return (
-        <div>
-            <ActivityDetails content={this.props.content} />
+          <h3>Day {day}: {this.props.city} </h3>
+          <h5>{this.props.content}</h5>
         </div>
       );
     } else {
-      return(
-        <section>
-          <div>
-            <ActivityDetails content={this.props.content} />
-          </div>
-
-          <div>
-            <ActivityDetails content={this.props.content} />
-          </div>
-
-          <div>
-            <ActivityDetails content={this.props.content} />
-          </div>
-
-        </section>
+      return (
+        <div>
+          <h5>{this.props.content}</h5>
+        </div>
       );
     }
   }

@@ -11,19 +11,11 @@ class Itinerary extends Component {
     super(props);
     this.state = {
       template: null,
-      activities: null,
       cities: null,
+      activities: null,
       hasBeenCalled: false
     };
   }
-
-  // updateActivities = (id) => {
-  //   const activityList = [...this.state.activities, id];
-  //   this.setState({
-  //     activities: activityList
-  //   })
-  //   console.log(this.state.activities);
-  // }
 
   componentDidMount = () => {
     const {duration, travelerType, pace} = this.props.userAnswers;
@@ -34,6 +26,7 @@ class Itinerary extends Component {
         console.log(response);
         this.setState({
           template: response.data.id,
+          cities: response.data.content
         });
       })
       .catch(function (error) {
@@ -53,23 +46,13 @@ class Itinerary extends Component {
       entertainment: this.props.userAnswers.entertainment.join(', ')
     }
 
-    const userAnswersString =
-    `templateId=${this.state.template}
-    &type=${this.props.userAnswers.travelParty}
-    &budget=${this.props.userAnswers.budget}
-    &pace=/${this.props.userAnswers.pace}
-    &sites=${this.props.userAnswers.sites}
-    &cityTravel=${this.props.userAnswers.cityTravel.join(', ')}
-    &interests=${this.props.userAnswers.interests.join(', ')}
-    &entertainment=${this.props.userAnswers.entertainment.join(', ')}`
-
     console.log(userAnswers);
     axios.post(`http://localhost:8080/getActivities`, userAnswers)
     .then(response => {
       console.log(response);
       this.setState({
         activities: response.data,
-        hasBeenCalled: true
+        hasBeenCalled: true,
       })
     })
     .catch(function (error) {
@@ -82,23 +65,21 @@ class Itinerary extends Component {
       this.createItinerary();
     }
     console.log();
+
     let itinerary;
+
     if (this.state.activities === null) {
       itinerary = <div><h5>Loading...</h5></div>;
 
     } else {
       itinerary = this.state.activities.map((activity, index) => {
         return (
-          <section>
-            <h3>Day {index+1}: {activity.city}</h3>
             <Activity
               key={index}
-              day={index}
-              lastDay={this.state.activities.length-1}
+              index={index}
               content={activity.content}
+              city={activity.city}
             />
-
-          </section>
         )
       });
     }
