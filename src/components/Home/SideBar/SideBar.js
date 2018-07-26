@@ -12,7 +12,6 @@ const sideBar = props => {
       <ul>
         <li onClick={props.click}><a href="#about">About</a></li>
         <li onClick={props.click}><a href="#features">Features</a></li>
-        <li onClick={props.click}><a href="">Sign-in</a></li>
       </ul>
     </nav>
   );

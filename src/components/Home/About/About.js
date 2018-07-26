@@ -30,7 +30,7 @@ const about= (props) => (
 
     <div className="row">
       <div className="about-content col 15 valign">
-        <img src="http://via.placeholder.com/350x150" alt="Get your personalized travel template" className="responsive-img" />
+        <img src={require("./itineraryScreenshot.png")} alt="Get your personalized travel template" className="responsive-img" />
       </div>
       <div className="col l6 offset-l1 valign-wrapper">
         <div className="about-container">
@@ -60,13 +60,13 @@ const about= (props) => (
              Make it Your Own
             </h4>
             <p className="about-description">
-              Easily tailor your travel plan to your needs by changing or removing items and adding in personal notes.
+              Easily tailor your travel plan to your needs by rearranging items in the itinerary.
             </p>
           </div>
         </div>
       </div>
       <div className="col offset-l1 15 no-right-padding valign">
-        <img src="http://via.placeholder.com/350x150" alt="Make it your own" className="responsive-img" />
+        <img src={require("./editingScreenshot.png")} alt="Make it your own" className="responsive-img" />
       </div>
     </div>
 
@@ -76,17 +76,17 @@ const about= (props) => (
 
     <div className="row">
       <div className="col 15 valign">
-        <img src="http://via.placeholder.com/350x150" alt="Get your personalized travel template" className="responsive-img" />
+        <img src={require("./have-fun.jpg")} alt="Make it your own" className="responsive-img" />
       </div>
       <div className="col l6 offset-l1 valign-wrapper">
         <div className="about-container">
           <div className="about-content-right">
             <h4 className="about-title">
               <i className="material-icons number">filter_4</i>
-              Take it with you!
+              Have a great trip!
             </h4>
             <p className="about-description">
-              Log in to save your itinerary or download a copy to bring on your trip.
+              Head off with confidence knowing your trip is tailor-made for you!
             </p>
           </div>
         </div>
