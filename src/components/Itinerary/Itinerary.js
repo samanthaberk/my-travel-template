@@ -99,7 +99,7 @@ class Itinerary extends Component {
           </div>
 
           <div className="col s9 itinerary-main-content">
-            <h3>{itinerary}</h3>
+            <p>{itinerary}</p>
           </div>
 
         </div>
